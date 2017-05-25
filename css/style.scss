@@ -14,6 +14,9 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 h2 {
   font-size: 3rem;
+  letter-spacing: 5px;
+  padding: 0 0px 25px 25px;
+  border-left: 1px solid $accent;
   @extend %light-font-weight;
   @extend %uppercase;
 }
@@ -50,7 +53,10 @@ img {
 .side-bar {
   width: 40%;
   float: left;
+  margin-right: 2%;
   box-sizing: border-box;
+  height: 1070px;
+  overflow: hidden;
 
   .side-bar-content {
     background: #000;
@@ -58,26 +64,55 @@ img {
   }
 }
 
-.main-story {
-  width: 80%;
-}
-
 .story {
   border-bottom: 1px solid #555;
   width: 60%;
-  padding-bottom: 10px;
+  padding: 35px 0;
   margin:20px 0;
+  position: relative;
+}
+.top-number {
+  color: $accent;
+  position: absolute;
+  font-size: 100px;
+  top: -115px;
+  right: -75px;
+}
+.number {
+  position: absolute;
+  color: #333;
+  font-size: 100px;
+  right: -75px;
+  bottom: -22px;
+  line-height: normal;
+}
+.number:hover, .top-number:hover {
+  color:#fff;
 }
 
 .story:nth-of-type(2){
   border-top: 1px solid #555;
-  padding: 15px 0;
 }
 
+///////////////////////////////////////
+////////////////Right Side Content////
+/////////////////////////////////////
+
 .latest-stories {
-  width: 60%;
+  width: 58%;
   float: left;
   box-sizing: border-box;
+  height: 1070px;
+  overflow: scroll;
+
+  h4 {
+    padding-bottom: 15px;
+  }
+}
+
+.split-story {
+  width: 50%;
+  float: left;
 }
 
 .clearfix::after {
